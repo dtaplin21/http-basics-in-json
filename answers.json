@@ -2,15 +2,17 @@
   "1": {
     "endpoint": "Ask for the Home Page",
     "request": {
-      "method": "",
-      "URL": "",
-      "headers": null,
-      "body": null
+      "method": "GET",
+      "URL": "/",
+      "headers": false,
+      "body": false
     },
     "response": {
-      "headers": null,
-      "statusCode": null,
-      "body": null
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "statusCode": 200,
+      "body": true
     }
   },
   "2": {
@@ -72,15 +74,25 @@
   "6": {
     "endpoint": "Submit a new product",
     "request": {
-      "method": "",
-      "URL": "",
-      "headers": null,
-      "body": null
+      "method": "post",
+      "URL": "/",
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": {
+        "name": true,
+        "descri[tion": true,
+        "price": true,
+        "categories": true
+      }
     },
     "response": {
-      "headers": null,
-      "statusCode": null,
-      "body": null
+      "headers": {
+        "Content-Type": "text/html",
+        "Location": "/uproducts/:productsId"
+      }
+      "statusCode": 302,
+      "body": true
     }
   },
   "7": {
